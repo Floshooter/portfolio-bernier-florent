@@ -234,8 +234,13 @@ export const fr = {
     description: "Rechargez la page ou revenez à l'accueil.",
   },
   maintenance: {
-    title: "Site en maintenance",
-    description: "Le site revient très vite.",
+    badge: "Maintenance en cours",
+    title: "Le site fait peau neuve",
+    description: "Quelques réglages sont en cours. Le site revient très vite, avec du nouveau.",
+    progress: "Mise à jour en cours",
+    meanwhile: "En attendant, vous pouvez me contacter ou consulter mon CV.",
+    contact: "Me contacter",
+    downloadCv: "Télécharger mon CV",
   },
 } as const
 

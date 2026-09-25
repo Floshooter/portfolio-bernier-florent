@@ -232,7 +232,12 @@ export const en: TranslationSchema = {
     description: "",
   },
   maintenance: {
+    badge: "",
     title: "",
     description: "",
+    progress: "",
+    meanwhile: "",
+    contact: "",
+    downloadCv: "",
   },
 }

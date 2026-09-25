@@ -41,5 +41,6 @@ export const schools: readonly School[] = [
         description: { fr: "Spécialisation SLAM." },
       },
     ],
+    logo: "/media/schools/ipssi/ipssi.jpeg",
   },
 ]
