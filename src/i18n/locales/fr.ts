@@ -84,6 +84,23 @@ export const fr = {
     next: "Image suivante",
     position: "Image {{current}} sur {{total}}",
   },
+  news: {
+    title: "Actualités",
+    subtitle: "Les derniers articles de mes sources de veille, mis à jour chaque jour.",
+    new: "Nouveau",
+    unread_one: "{{count}} nouvel article",
+    unread_many: "{{count}} nouveaux articles",
+    unread_other: "{{count}} nouveaux articles",
+    updated: "Mis à jour {{date}}",
+    empty: "Aucune actualité pour le moment.",
+    error: "Impossible de charger les actualités.",
+    seeAll: "Voir toutes les actualités",
+    loadMore: "Afficher plus",
+    filters: {
+      label: "Filtrer par thème",
+      all: "Tous",
+    },
+  },
   skillCategory: {
     markup: "Balisage",
     styling: "Mise en forme",
@@ -179,6 +196,7 @@ export const fr = {
       projectCount_many: "{{count}} projets",
       projectCount_other: "{{count}} projets",
       yearEmpty: "Aucun projet pour cette année pour le moment.",
+      watch: "Veilles technologiques",
     },
     projects: {
       subtitle: "Mes projets personnels, en cours ou terminés.",
@@ -199,7 +217,10 @@ export const fr = {
       all: "Tous les voyages",
     },
     watch: {
-      subtitle: "Section en préparation.",
+      subtitle: "Mes veilles technologiques : les sujets que je suis, mes sources et mes analyses.",
+      topics: "Sujets de veille",
+      sources: "Sources",
+      school: "Réalisée dans le cadre de",
     },
   },
   cv: {

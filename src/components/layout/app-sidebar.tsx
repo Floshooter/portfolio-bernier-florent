@@ -3,6 +3,7 @@ import { motion } from "motion/react"
 import { useState, type MouseEvent } from "react"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router"
+import { SocialIcon } from "@/components/content/social-icon"
 import { ProfileIdentity } from "@/components/layout/profile-identity"
 import {
   collectionPreviewLimit,
@@ -231,10 +232,17 @@ function SocialsItem({ entry }: { readonly entry: SocialsEntry }) {
           <SidebarMenuSub>
             {profile.socials.map((social) => (
               <SidebarMenuSubItem key={social.network}>
-                <SidebarMenuSubButton asChild>
+                <SidebarMenuSubButton asChild className="group/social">
                   <a href={social.url} target="_blank" rel="noopener noreferrer">
+                    <SocialIcon
+                      network={social.network}
+                      className="text-muted-foreground group-hover/social:text-(--brand) group-focus-visible/social:text-(--brand)"
+                    />
                     <span>{social.label}</span>
-                    <ExternalLink aria-hidden="true" className="ml-auto" />
+                    <ExternalLink
+                      aria-hidden="true"
+                      className="ml-auto size-3.5 opacity-0 transition-opacity group-hover/social:opacity-60 group-focus-visible/social:opacity-60"
+                    />
                   </a>
                 </SidebarMenuSubButton>
               </SidebarMenuSubItem>

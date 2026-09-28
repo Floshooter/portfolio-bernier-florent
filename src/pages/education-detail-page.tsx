@@ -6,8 +6,10 @@ import { ProjectCard } from "@/components/content/project-card"
 import { WebsiteLink } from "@/components/content/website-link"
 import { PageHeader } from "@/components/page-header"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { WatchCard } from "@/components/watch/watch-card"
 import { getAdjacentSchools, getProjectsBySchoolYear, getSchool } from "@/content"
 import { localize } from "@/content/types"
+import { getWatchTopicsBySchool } from "@/content/watch"
 import { useFormatDuration } from "@/hooks/use-format-duration"
 import { localizedPath } from "@/i18n/paths"
 import { useLanguage } from "@/i18n/use-language"
@@ -30,6 +32,7 @@ export function EducationDetailPage() {
   const years = school.years ?? []
   const hasYears = years.length > 0
   const commonProjects = getProjectsBySchoolYear(school.slug, null)
+  const watchTopics = getWatchTopicsBySchool(school.slug)
   const { previous, next } = getAdjacentSchools(school.slug)
   const hasAdjacent = previous !== undefined || next !== undefined
   const duration = formatDuration(school.period)
@@ -94,6 +97,21 @@ export function EducationDetailPage() {
             {commonProjects.map((project) => (
               <li key={project.slug}>
                 <ProjectCard project={project} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {watchTopics.length > 0 && (
+        <section aria-labelledby="school-watch-title" className="space-y-4">
+          <h2 id="school-watch-title" className="text-xl font-semibold tracking-tight">
+            {t("pages.education.watch")}
+          </h2>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {watchTopics.map((topic) => (
+              <li key={topic.slug}>
+                <WatchCard topic={topic} />
               </li>
             ))}
           </ul>

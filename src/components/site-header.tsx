@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 import { Link } from "react-router"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { ProfileIdentity } from "@/components/layout/profile-identity"
+import { NewsBell } from "@/components/news/news-bell"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { SidebarTrigger } from "@/components/ui/sidebar"
@@ -20,6 +21,7 @@ export function SiteHeader() {
         <SidebarTrigger className="shrink-0 md:hidden" aria-label={t("sidebar.toggle")} />
         <ProfileIdentity nameClassName="hidden min-[400px]:inline" />
         <div className="ml-auto flex shrink-0 items-center gap-1">
+          <NewsBell />
           <ThemeToggle />
           <LanguageSwitcher />
           <Button asChild variant="ghost" size="icon">

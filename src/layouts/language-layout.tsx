@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Navigate, Outlet, useLocation, useNavigation, useParams } from "react-router"
 import { AppSidebar } from "@/components/layout/app-sidebar"
+import { DocumentMeta } from "@/components/seo/document-meta"
 import { SiteHeader } from "@/components/site-header"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
@@ -42,6 +43,7 @@ export function LanguageLayout() {
   return (
     <MotionConfig reducedMotion="user">
       <TooltipProvider delayDuration={0}>
+        <DocumentMeta />
         {isNavigating && (
           <div aria-hidden="true" className="fixed inset-x-0 top-0 z-[60] h-0.5 animate-pulse bg-primary" />
         )}

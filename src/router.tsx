@@ -91,6 +91,10 @@ export const router = createBrowserRouter(
           lazy: async () => ({ Component: (await import("@/pages/watch-page")).WatchPage }),
         },
         {
+          path: "watch/:slug",
+          lazy: async () => ({ Component: (await import("@/pages/watch-detail-page")).WatchDetailPage }),
+        },
+        {
           path: "cv",
           lazy: async () => ({ Component: (await import("@/pages/cv-page")).CvPage }),
         },
